@@ -4,32 +4,31 @@
     "description": "Validador de tags para testes Playwright",
     "main": "bin/playwright-tag-linter.cjs",
     "bin": {
-      "playwright-tag-linter": "bin/playwright-tag-linter.cjs"
+        "playwright-tag-linter": "bin/playwright-tag-linter.cjs"
     },
     "type": "commonjs",
     "scripts": {
-      "lint:tags": "playwright-tag-linter --pattern 'tests/**/*.spec.ts'"
+        "lint:tags": "playwright-tag-linter --pattern 'tests/**/*.spec.ts'"
     },
     "keywords": [
-      "playwright",
-      "linter",
-      "tags",
-      "testing",
-      "qa"
+        "playwright",
+        "linter",
+        "tags",
+        "testing",
+        "qa"
     ],
     "author": "Jessica Silva <hi.callme.jessy@gmail.com>",
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/JessicaSilva0/tag-linter-playwright.git"
+        "type": "git",
+        "url": "git+https://github.com/JessicaSilva0/tag-linter-playwright.git"
     },
     "bugs": {
-      "url": "https://github.com/JessicaSilva0/tag-linter-playwright/issues"
+        "url": "https://github.com/JessicaSilva0/tag-linter-playwright/issues"
     },
     "homepage": "https://github.com/JessicaSilva0/tag-linter-playwright#readme",
     "dependencies": {
-      "@typescript-eslint/parser": "^6.0.0",
-      "glob": "^10.3.10"
+        "@typescript-eslint/parser": "^8.38.0",
+        "glob": "^11.0.3"
     }
-  }
-  
+}
