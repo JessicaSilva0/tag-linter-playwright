@@ -71,12 +71,12 @@ Você pode criar um arquivo na raiz do projeto para definir suas regras:
 ## Exemplos
 
 ```bash
-playwright-tag-linter --required "@smoke,@critical"
+npx playwright-tag-linter --required "@smoke,@critical"
 ```
 
 Rodando com verbose para mais detalhes:
 ```bash
-playwright-tag-linter --verbose
+npx playwright-tag-linter --verbose
 ```
 
 ## Contribuição
