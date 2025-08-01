@@ -30,13 +30,22 @@ npm install -g tag-linter-playwright
 Adicione um script:
 ```bash
 "scripts": {
-  "lint:tags": "playwright-tag-linter --pattern 'tests/**/*.spec.ts'"
+  "lint:tags": "playwright-tag-linter"
 }
 ```
 
 E rode:
 ```bash
 npm run lint:tags
+```
+
+Por padrão, o linter procura arquivos de teste que sigam o padrão:
+
+`**/*.{spec,test}.{ts,js}`
+
+Se quiser customizar, use a flag `--pattern`:
+```bash
+npm run lint:tags --pattern "tests/**/*.spec.ts"
 ```
 
 2. Via CLI
