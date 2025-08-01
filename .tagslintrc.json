@@ -1,0 +1,17 @@
+{
+  "testPattern": "**/*.{spec,test}.{ts,js}",
+  "exclude": ["node_modules/**", "dist/**", "coverage/**", ".git/**"],
+  "requiredTags": [],
+  "tagPattern": "^@[a-zA-Z0-9-_]+$",
+  "rules": {
+    "require-tags": "error",
+    "valid-tag-format": "warn",
+    "required-tags-present": "warn"
+  },
+  "tagCategories": {
+    "priority": ["@critical", "@high", "@medium", "@low"],
+    "type": ["@smoke", "@regression", "@functional", "@api", "@visual"],
+    "module": ["@IEC", "@IAC", "@DPT", "@IIMDRF"],
+    "environment": ["@POLARIS", "@ANTARES", "@ENDOR", "@SIRIUS", "@PREPROD"]
+  }
+}
