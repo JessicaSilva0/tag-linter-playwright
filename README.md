@@ -5,8 +5,8 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
 
 
-
-Validador simples para garantir que as tags usadas nos seus testes Playwright estejam corretas e padronizadas.
+Validador simples e robusto de tags para testes Playwright, baseado na mesma abordagem do ESLint, usando `@typescript-eslint/parser` para analisar seu código TypeScript ou JavaScript.
+Compatível com Playwright, TypeScript e Node.js.
 
 ## Instalação
 
@@ -54,11 +54,13 @@ npx playwright-tag-linter --pattern "tests/**/*.spec.ts"
 
 ```
 
-##  Arquivo de configuração .tagslintrc.json
+## .tagslintrc.json
 
-Você pode criar um arquivo na raiz do projeto para definir suas regras:
+Você pode criar um arquivo `.tagslintrc.json` na raiz do projeto para configurar as regras do validador de tags. O linter usará essas configurações para validar seus testes e exibirá os respectivos avisos e erros conforme as regras definidas.
 
-```bash
+Exemplo:
+
+```json
 {
   "testPattern": "**/*.{spec,test}.{ts,js}",
   "exclude": ["node_modules/**", "dist/**", "coverage/**", ".git/**"],

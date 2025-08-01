@@ -1,6 +1,6 @@
 {
     "name": "tag-linter-playwright",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "Validador de tags para testes Playwright",
     "main": "bin/playwright-tag-linter.cjs",
     "bin": {
