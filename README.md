@@ -39,13 +39,7 @@ E rode:
 npm run lint:tags
 ```
 
-2. Via CLI (instalação global ou npx)
-
-```bash
-playwright-tag-linter --pattern "tests/**/*.spec.ts"
-```
-
-Ou:
+2. Via CLI
 ```bash
 npx playwright-tag-linter --pattern "tests/**/*.spec.ts"
 
