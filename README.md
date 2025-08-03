@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
 > ⚠️ **Note:** This README is in English.  
-> For the Portuguese version, please see [README.pt-br.md](./README.pt-br.md) or visit the [Portuguese documentation on GitHub](https://github.com/JessicaSilva0/tag-linter-playwright/blob/main/README.pt-br.md).
+> For the Portuguese version, please see [README.pt-br.md](./README.pt-br.md) or visit the [Portuguese documentation on GitHub](https://github.com/JessicaSilva0/tag-linter-playwright/blob/develop/README.pt-br.md).
 
 > **A lightweight yet powerful tag validator for Playwright tests**  
 > Inspired by ESLint, using `@typescript-eslint/parser` to analyze TypeScript or JavaScript code.
