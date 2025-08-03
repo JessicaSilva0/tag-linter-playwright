@@ -1,6 +1,6 @@
 {
     "name": "tag-linter-playwright",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Validador de tags para testes Playwright",
     "main": "bin/playwright-tag-linter.cjs",
     "bin": {
@@ -15,7 +15,15 @@
         "linter",
         "tags",
         "testing",
-        "qa"
+        "qa",
+        "test-automation",
+        "typescript",
+        "javascript",
+        "eslint",
+        "test-runner",
+        "test-framework",
+        "test-validator",
+        "code-quality"
     ],
     "author": "Jessica Silva <hi.callme.jessy@gmail.com>",
     "license": "MIT",

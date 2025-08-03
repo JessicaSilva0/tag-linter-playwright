@@ -1,65 +1,75 @@
 # tag-linter-playwright
 [![npm version](https://img.shields.io/npm/v/tag-linter-playwright.svg)](https://www.npmjs.com/package/tag-linter-playwright)
+[![npm downloads](https://img.shields.io/npm/dm/tag-linter-playwright.svg)](https://www.npmjs.com/package/tag-linter-playwright)
 [![Playwright](https://img.shields.io/badge/Playwright-latest-blue.svg)](https://playwright.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
+> ⚠️ **Note:** This README is in English.  
+> For the Portuguese version, please see [README.pt-br.md](./README.pt-br.md) or visit the [Portuguese documentation on GitHub](https://github.com/JessicaSilva0/tag-linter-playwright/blob/main/README.pt-br.md).
 
-Validador simples e robusto de tags para testes Playwright, baseado na mesma abordagem do ESLint, usando `@typescript-eslint/parser` para analisar seu código TypeScript ou JavaScript.
-Compatível com Playwright, TypeScript e Node.js.
+> **A lightweight yet powerful tag validator for Playwright tests**  
+> Inspired by ESLint, using `@typescript-eslint/parser` to analyze TypeScript or JavaScript code.
 
-## Instalação
+---
 
-**Dependência local** (recomendado):
+## 📦 Installation
 
+**Local dependency** (recommended):
 ```bash
 npm install --save-dev tag-linter-playwright
 ```
 
-**Instalação Global**
-
+**Global installation**:
 ```bash
 npm install -g tag-linter-playwright
 ```
 
+---
 
-## Como utilizar
+## 🚀 Usage
 
-1. Via script no package.json
+### Via `package.json` Script
 
-Adicione um script:
-```bash
+Add the script to your `package.json`:
+```json
 "scripts": {
   "lint:tags": "playwright-tag-linter"
 }
 ```
 
-E rode:
+Run:
 ```bash
 npm run lint:tags
 ```
 
-Por padrão, o linter procura arquivos de teste que sigam o padrão:
+By default, the linter searches for test files matching:
+```
+**/*.{spec,test}.{ts,js}
+```
 
-`**/*.{spec,test}.{ts,js}`
-
-Se quiser customizar, use a flag `--pattern`:
+You can customize the search pattern:
 ```bash
 npm run lint:tags --pattern "tests/**/*.spec.ts"
 ```
 
-2. Via CLI
+---
+
+### Via CLI
+
+Run directly from the terminal without adding to `package.json`:
 ```bash
 npx playwright-tag-linter --pattern "tests/**/*.spec.ts"
-
 ```
 
-## .tagslintrc.json
+---
 
-Você pode criar um arquivo `.tagslintrc.json` na raiz do projeto para configurar as regras do validador de tags. O linter usará essas configurações para validar seus testes e exibirá os respectivos avisos e erros conforme as regras definidas.
+## `.tagslintrc.json` (opcional)
 
-Exemplo:
+Create a `.tagslintrc.json` file at the root of your project to define tag validation rules.
 
+**Example:**
 ```json
 {
   "testPattern": "**/*.{spec,test}.{ts,js}",
@@ -79,21 +89,49 @@ Exemplo:
 }
 ```
 
-## Exemplos
+---
+
+## CLI Options
+
+| Option            | Description                                   | Example |
+|-------------------|-----------------------------------------------|---------|
+| `--pattern`       | Glob pattern for test files                   | `--pattern "tests/**/*.spec.ts"` |
+| `--required`      | Required tags (comma-separated)               | `--required "@smoke,@critical"` |
+| `--verbose`       | Show detailed output                          | `--verbose` |
+| `--config`        | Path to a custom `.tagslintrc.json` file      | `--config ./config/tagslintrc.json` |
+
+---
+
+## Example Output
 
 ```bash
-npx playwright-tag-linter --required "@smoke,@critical"
+$ npx playwright-tag-linter --required "@smoke,@critical" --verbose
+
+✔ tests/login.spec.ts: All required tags are present
+⚠ tests/payment.spec.ts: Missing required tag @critical
+✖ tests/cart.spec.ts: Invalid tag format "@SmokeTest"
 ```
 
-Rodando com verbose para mais detalhes:
-```bash
-npx playwright-tag-linter --verbose
-```
+---
 
-## Contribuição
+## 🎥 Demo
 
-Pull requests são bem-vindos! Abra uma [issue](https://github.com/JessicaSilva0/tag-linter-playwright/issues) para discutir melhorias ou bugs.
+![Playwright Tag Linter Demo](./assets/demo.gif)
 
-## Happy Testing 🎭
+---
 
-Feito com 💛 por [Jessica Silva](https://github.com/jessicaSilva0).
+## 🤝 Contributing
+
+Pull requests are welcome!  
+Please open an [issue](https://github.com/JessicaSilva0/tag-linter-playwright/issues) to discuss new features, improvements, or bug fixes.
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🎭 Happy Testing  
+Made with 💛 by [Jessica Silva](https://github.com/jessicaSilva0)
